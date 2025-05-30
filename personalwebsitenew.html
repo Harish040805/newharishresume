@@ -264,16 +264,24 @@
 .col-span-2 {
   grid-column: span 2;
 }
-.notification {
+ .notification {
     position: fixed;
-    top: 20px;
+    bottom: 20px;
     right: 20px;
     padding: 10px 20px;
     border-radius: 5px;
     color: #fff;
     display: none;
     z-index: 1001;
-  }  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .notification .close-btn {
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 18px;
+  }
   </style>
 </head>
 <body>
@@ -432,8 +440,10 @@
     </div>
   </section>
 	<div id="notification" class="notification" style="background-color: #6366f1;">
-  	View my LinkedIn profile: 
+  	 <span>View my LinkedIn profile:</span>
   	<a href="https://www.linkedin.com/in/harish-rameshbabu--38970b2a5">Click to view</a>
+	  <span class="close-btn" onclick="closeNotification()">&times;</span>	
+	</div>
 <script>
   setTimeout(() => {
     const notification = document.getElementById('notification');
