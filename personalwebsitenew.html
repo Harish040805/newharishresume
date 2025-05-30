@@ -264,6 +264,16 @@
 .col-span-2 {
   grid-column: span 2;
 }
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    display: none;
+    z-index: 1001;
+  }  
   </style>
 </head>
 <body>
@@ -421,5 +431,17 @@
             <b>* View my Resume</b> &nbsp; &nbsp; &nbsp; <a href="https://harish040805.github.io/newharishresume/" class="btn-primary">Resume</a>
     </div>
   </section>
+	<div id="notification" class="notification" style="background-color: #6366f1;">
+  	View my LinkedIn profile: 
+  	<a href="https://www.linkedin.com/in/harish-rameshbabu--38970b2a5">Click to view</a>
+<script>
+  setTimeout(() => {
+    const notification = document.getElementById('notification');
+    notification.style.display = 'block';
+    setTimeout(() => {
+      notification.style.display = 'none';
+    }, 3000); 
+  }, 5000); 
+</script>
 </body>
 </html>
