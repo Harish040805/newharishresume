@@ -69,17 +69,21 @@ font-size: 15px;
 }
 h1 { font-size: 31px; }
 h3 { font-size: 19px; }
-.skills-table {
-  border-collapse: collapse;
-  width: 100%;
-  border: none;
+.skills-container {
+  display: flex;
+  flex-direction: column;
 }
-td {
-  width: 33.33%;
-  padding: 10px;
-  vertical-align: top;
-  border: none;
+.skill-category {
+  display: flex;
+  margin-bottom: 20px;
 }
+.category-name {
+  width: 30%;
+  font-weight: bold;
+}
+.category-skills {
+  width: 70%;
+}	
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://kit.fontawesome.com/ac42c3b1f7.js" crossorigin="anonymous"></script>	
@@ -140,33 +144,32 @@ Chennai
 </section>
 <section id="skills">
 <h3>Skills</h3>
-<hr>
-<table class="skills-table">
-  <tr>
-    <td><b>Technical Skills</b></td>
-    <td>Web Designing (Static, Dynamic, Interactive, Responsive), UI/UX Designing, 2D Game Designing, Logo Designing,<br> Artificial Intelligence, Online Poster Making,<br> Website Security, 3D Modelling, Deployment</td>
-  </tr>
-  <tr>
-    <td><b>Programming Languages & Technologies</b></td>
-    <td>HTML, CSS, Javascript, Three.js, D3.js, React, C, C++, Java, Python</td>
-  </tr>
-  <tr>
-    <td><b>Tools & Software</b></td>
-    <td>Figma, Canva, Blender, VS Code, Notepad, Notepad++, Github, Bootstrap</td>
-  </tr>
-  <tr>
-    <td><b>Soft Skills</b></td>
-    <td>Communication Skills (Spoken English, Technical English), Life-long learning</td>
-  </tr>
-  <tr>
-    <td><b>Languages</b></td>
-    <td>Tamil, Sanskrit, Hindi, Telugu</td>
-  </tr>
-  <tr>
-    <td><b>Other Skills</b></td>
-    <td>Design Thinking, Creative Writing, Professional Ethics</td>
-  </tr>
-</table>	
+<hr><div class="skills-container">
+  <div class="skill-category">
+    <div class="category-name"><b>Technical Skills</b></div>
+    <div class="category-skills">Web Designing (Static, Dynamic, Interactive, Responsive), UI/UX Designing,<br> 2D Game Designing, Logo Designing, Artificial Intelligence,<br> Online Poster Making, Website Security, 3D Modelling, Deployment</div>
+  </div>
+  <div class="skill-category">
+    <div class="category-name"><b>Programming Languages & Technologies</b></div>
+    <div class="category-skills">HTML, CSS, Javascript, Three.js, D3.js, React, C, C++, Java, Python</div>
+  </div>
+  <div class="skill-category">
+    <div class="category-name"><b>Tools & Software</b></div>
+    <div class="category-skills">Figma, Canva, Blender, VS Code, Notepad, Notepad++, Github, Bootstrap</div>
+  </div>
+  <div class="skill-category">
+    <div class="category-name"><b>Soft Skills</b></div>
+    <div class="category-skills">Communication Skills (Spoken English, Technical English), Life-long learning</div>
+  </div>
+  <div class="skill-category">
+    <div class="category-name"><b>Languages</b></div>
+    <div class="category-skills">Tamil, Sanskrit, Hindi, English, Telugu</div>
+  </div>
+  <div class="skill-category">
+    <div class="category-name"><b>Other Skills</b></div>
+    <div class="category-skills">Design Thinking, Creative Writing, Professional Ethics</div>
+  </div>
+</div>	
 </section>
 <section id="certificates">	
 <h3>Learning Profile</h3>
