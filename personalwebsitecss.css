@@ -1,0 +1,292 @@
+    :root {
+      --primary-color: #6366f1;
+      --secondary-color: #4f46e5;
+      --accent-color: #ec4899;
+      --text-color: #1f2937;
+      --bg-color: #ffffff;
+      --gray: #6b7280;
+      --dark-gray: #4b5563;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background-color: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--primary-color);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    nav a:hover,
+    nav a.active {
+      color: var(--primary-color);
+    }
+    .hero {
+      padding-top: 8rem;
+      padding-bottom: 4rem;
+      background: linear-gradient(to bottom right, #f3f4f6, #e0e7ff);
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--text-color);
+    }
+    .hero span {
+      color: var(--primary-color);
+    }
+    .hero p {
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      color: var(--gray);
+    }
+    .heroo {
+      background: linear-gradient(to bottom right, #f3f4f6, #e0e7ff);
+      text-align: center;
+    }
+    .heroo h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--text-color);
+    }
+    .heroo span {
+      color: var(--primary-color);
+    }
+    .heroo p {
+      max-width: 600px;
+      color: var(--gray);
+    }	  
+    .btn-primary {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      border-radius: 9999px;
+      background-color: var(--primary-color);
+      color: white;
+      font-weight: 600;
+      text-decoration: none;
+      margin-right: 1rem;
+      transition: background 0.3s ease;
+    }
+    .btn-primary:hover {
+      background-color: var(--secondary-color);
+    }
+    .btn-outline {
+      border: 2px solid var(--primary-color);
+      background: transparent;
+      color: var(--primary-color);
+    }
+    .btn-outline:hover {
+      background-color: var(--primary-color);
+      color: white;
+    }
+    .about,
+    .skills,
+    .portfolio,
+    .testimonials,
+    .contact {
+      padding: 4rem 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 2rem;
+      color: var(--text-color);
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+    .about-grid img {
+      width: 100%;
+      border-radius: 1rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    .about-text ul li {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.75rem;
+      color: var(--gray);
+    }
+    .about-text ul li::before {
+      content: "✓";
+      color: var(--accent-color);
+      font-weight: bold;
+    }
+    .skills-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    .skill-card {
+      background: #f9fafb;
+      padding: 1rem;
+      border-radius: 0.75rem;
+      text-align: center;
+      border: 1px solid #e5e7eb;
+      transition: transform 0.3s ease;
+    }
+    .skill-card:hover {
+      transform: translateY(-5px);
+    }
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .portfolio-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 1rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .portfolio-item img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+    .portfolio-item:hover img {
+      transform: scale(1.1);
+    }
+    .portfolio-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      opacity: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: opacity 0.3s ease;
+    }
+    .portfolio-item:hover .portfolio-overlay {
+      opacity: 1;
+    }
+    .portfolio-overlay h4 {
+      color: white;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+    .portfolio-overlay p {
+      color: #d1d5db;
+      font-size: 0.9rem;
+      text-align: center;
+      padding: 0 1rem;
+    }
+    .contact-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #d1d5db;
+      border-radius: 0.5rem;
+      font-family: inherit;
+      font-size: 1rem;
+    }
+    .contact-form textarea {
+      resize: vertical;
+      min-height: 150px;
+    }
+    footer {
+      background: #111827;
+      color: #9ca3af;
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+    @media (max-width: 768px) {
+      .about-grid,
+      .contact-form {
+        grid-template-columns: 1fr;
+      }
+      nav ul {
+        flex-direction: column;
+        background: white;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        padding: 1rem;
+        display: none;
+      }
+      nav ul.active {
+        display: flex;
+      }
+    }
+	.btn-send {
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: fit-content;
+}
+.btn-send:hover {
+  background-color: var(--secondary-color);
+}
+.col-span-2 {
+  grid-column: span 2;
+}
+ .notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    display: none;
+    z-index: 1001;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .notification .close-btn {
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 18px;
+  }
